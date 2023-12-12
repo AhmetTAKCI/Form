@@ -15,9 +15,15 @@ function Form() {
             <input type="number" placeholder="PhoneNumber" style={{color:"white"}} required />
          
             <input type="password" name="password" placeholder="Password Please" required />
-            <IoIosSearch onClick={setVisble(!visible)} />
+           {
+            visible ? 
+            <IoIosSearch onClick={()=>setVisble(!visible)} />
+            :
+            <IoIosSearch onClick={()=>setVisble(visible)} />
+
+           }
             <input type="password" name="passControl" placeholder="Password Please" required />
-            <IoIosSearch />
+            <IoIosSearch onClick={()=>setVisble(!visible)} />
             <button type="submit">Sıgn In</button>
         </form>
         </div>
